@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajrang Dal</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #container_main{
+            background-color: rgba(223, 191, 51, 0.411);
+            width: 80%;
+            height: auto;
+            margin: auto;
+            padding: 1%;
+        }
+        #head
+        {
+            background-color: transparent;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #head h1
+        {
+            position: relative;
+            font-size: 90px;
+            font-family: algerian;
+            margin: 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        #head img{
+            position: relative;
+            width: 8rem;
+            height: 8rem;
+        }
+        #sub_head
+        {
+            background-color: transparent;
+            height: auto;
+            text-align: center;
+        }
+        #content
+        {
+            width: 95%;
+            margin: auto;
+            padding: 1rem;
+            font-size: large;
+        }
+        #content .inp
+        {
+            width: 50%;
+            font-size: large;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid black;
+            margin: 2rem;
+        }
+        input[type=radio],input[type=checkbox] {
+            border: 0px;
+            width:  1.3em;
+            height: 1.3em;
+        }
+        #btn
+        {
+            width: 80%;
+            font-size: x-large;
+            outline: none;
+            border: none;
+            background-color: rgb(68, 211, 168);
+            color: black;
+            border-radius: 3px;
+            align-self: center;
+            padding: 5px;
+        }
+        #btn:hover
+        {
+            color: white;
+            background-color: rgb(238, 176, 61);
+            transition: all 0.3s ease-in;
+        }
+
+        /* mediaqueries for different screen size */
+
+        @media only screen and (max-width: 1200px) {
+            #container_main{
+            width: 99%;
+            height: auto;
+            margin: auto;
+            padding: 1%;
+        }
+        #head h1
+        {
+            position: relative;
+            font-size: 60px;
+            font-family: algerian;
+            margin: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        #head img{
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+        }
+        #sub-title
+        {
+            font-size: large;
+        }
+        }
+
+         @media only screen and (max-width: 600px) {
+            #container_main{
+            width: 100%;
+            height: auto;
+            margin: auto;
+            padding: 1%;
+        }
+        #head h1
+        {
+            position: relative;
+            font-size: 35px;
+            font-family: algerian;
+            margin: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        #head img{
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+        }
+        #sub-title
+        {
+            font-size: large;
+        }
+        }
+        #blc
+        {
+            display:flex;
+        }
+        #in1
+        {
+            flex: 5;
+        }
+        #in2
+        {
+            flex: 2;
+        }
+
+        /* image uplode */
+        #output_image
+        {
+            max-width: 300px;
+            max-height: 250px;
+            position: relative;
+            background-color: rgb(226, 226, 162);
+            float: right;
+        }
+        #img_up
+        {
+            outline: none;
+            display: none;
+        }
+        #lbl_img
+        {
+            display: block;
+            width: 200px;
+            height: 250px;
+            background-color: rgb(215, 215, 240);
+            padding: 5px;
+            border: 2px dotted rgb(0, 0, 0);
+            font-size: large;
+            border-radius: 12px;
+            text-align: center;
+            float: right;
+        }
+        /* for image */
+         @media only screen and (max-width: 600px)
+         {
+        #blc
+        {
+            display:grid;
+            grid-template-rows: repeat(4,auto);
+        }
+        #in1
+        {
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        #in2
+        {
+            grid-row-start: 0;
+            grid-row-end: 2;
+            margin: auto;
+        }
+         }
+
+         /* sign */
+         #sign_out
+        {
+            width: 300px;
+            height: 75px;
+            padding: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #sign_up
+        {
+            display: none;
+        }
+        #signature_div
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container_main">
+        <div id="head">
+            <img src="./images.png" alt="">
+            <h1><b>BAJRANG DAL</b></h1>
+            <img src="./images.png" alt="">
+        </div>
+        <div id="sub_head">
+        <h1 id="sub-title"><u>ADDMISSION FORM</u></h1>
+        <h3>(join us thid valentine's week for lifetime career opertunities and it is only for singles.)</h3>
+        </div>
+        <div id="content">
+            <form id="myf">
+                <div id="blc">
+                    <div id="in1">
+                        <label for="name"><b>NAME :</b></label>
+                        <input type="text" class="inp"placeholder="Name">
+                        <br>
+                        <label for="college"><b>COLLEGE/UNIVESITY :</b></label>
+                        <input type="text" class="inp"placeholder="College/University">
+                        <br>
+                        <label for="gender"><b>GENDER :</b></label>
+                        <input type="radio" name="gender" id="gender"> Male
+                        <input type="radio" name="gender" id="gender"> Female
+                        <br><br>
+                        <label for="rel"><b>RELATIONSHIP STATUS :</b></label>
+                        <input type="radio"> Single
+                        <br><br>
+                    </div>
+                        <div id="in2">
+                            
+                                    <div id="wrapper">
+                                        <img id="output_image"/>
+                                        <input type="file" accept="image/*" id="img_up" onchange="preview_image(event)">
+                                    </div>
+                                    <label for="img_up" id="lbl_img">Uplode a picture</label>
+                            
+                        </div>
+                        <br>
+                </div>
+
+                <label for="feel">&nbsp;<b>HOW DO YOU FEEL WHEN YOU SEE COUPLE ?</b></label>
+                <br>
+                <input type="checkbox">&nbsp;jealous
+                <br>
+                <input type="checkbox">&nbsp;Angry
+                <br>
+                <input type="checkbox">&nbsp;kootne ka man karta hai
+                <br>
+                <input type="checkbox">&nbsp;Unke ma bap ko batane ka man karta hai
+                <br><br>
+                <label for="kata"><b>KYA AAPKA KABHI KATA HAI ?</b></label>
+                <br>
+                <input type="checkbox">&nbsp; Ha
+                <br>
+                <input type="checkbox">&nbsp; kabhi koi mial hi nahi
+                <br><br>
+                <label for="hatiayar"><b>HATHIYAAR :</b></label>
+                <br>
+                <input type="checkbox">&nbsp;Lathi
+                <br>
+                <input type="checkbox">&nbsp;Belt
+                <br><br>
+                <label for="punishment"><b>PUNISHMENT :</b></label>
+                <br>
+                <input type="checkbox">&nbsp;Itna maro ki turant hi breakup ho jaye.
+                <br>
+                <input type="checkbox">&nbsp;Dua karo ki Naja lag jaye and breakup ho jaye.
+                <br><br>
+                <label for="pdosi"><b>KYA AAPKO PATA HAI AAPKE PADOSI KA AFFAIR KISKE SATH HAI</b></label>
+                <br>
+                <input type="checkbox">&nbsp;Ha
+                <br>
+                <input type="checkbox">&nbsp;Na
+                <br>
+                <br>
+                                <p style="color: black; text-align: center  ;">(Jinki sakal gandi ho aour general catagorie ke ho
+                                    unke liye special offer hai)</p>
+                                <br>
+                                <h3><b>DECLARATION :</b></h3>
+                                <p>
+                                    I hereby declare that mai nihayati berozgaar aaur janamjaat single hoon. Mai kabhi bhi aapne
+                                    kaam se kaam nahi rakhta/rakhti couples ko chhedna mera dhanda hai.</p>
+                                <br><br>
+                                <div id="signature_div">
+                                    <img id="sign_out" />
+                                    <br>
+                                    <input type="file" accept="image/*" id="sign_up" onchange="up_sign(event)">
+                                    <label for="sign_up" id="sign_btn" style="text-align: center;">Uplode Signature</label>
+                                </div>
+                                <br>
+                                <br>
+                                <div style="width: 100%; height: auto; display: flex; justify-content: center;">
+                                <button id="btn" type="button">Print</button>
+                                </div>
+                </form>
+        </div>
+    </div>
+    <script type='text/javascript'>
+        function preview_image(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output_image');
+                output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+            document.getElementById("lbl_img").style.display="none";
+        }
+
+        //signature
+        function up_sign(event) {
+                var sign = new FileReader();
+                sign.onload = function () 
+                {
+                    var output = document.getElementById('sign_out');
+                    output.src = sign.result;
+                }
+                sign.readAsDataURL(event.target.files[0]);
+                document.getElementById("sign_btn").innerHTML="Signature";
+            }
+            document.getElementById("btn").addEventListener("click",()=>{document.getElementById("btn").style.display="none";
+            alert("success ! Now you are a member of BAJRANG DAL . press ok & print your letter.");
+            window.print();})
+    </script>
+</body>
+</html>
